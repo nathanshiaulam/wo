@@ -7,9 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16090C241A1876EA0052E58A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C231A1876EA0052E58A /* AudioToolbox.framework */; };
+		16090C261A1876F30052E58A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C251A1876F30052E58A /* CFNetwork.framework */; };
+		16090C281A18770C0052E58A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C271A18770C0052E58A /* CoreLocation.framework */; };
+		16090C2A1A1877230052E58A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C291A1877230052E58A /* libz.dylib */; };
+		16090C2C1A18772B0052E58A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C2B1A18772B0052E58A /* MobileCoreServices.framework */; };
+		16090C2E1A1877520052E58A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C2D1A1877520052E58A /* QuartzCore.framework */; };
+		16090C301A1877620052E58A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C2F1A1877620052E58A /* Security.framework */; };
+		16090C321A18776B0052E58A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C311A18776B0052E58A /* StoreKit.framework */; };
+		16090C341A1877720052E58A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C331A1877720052E58A /* SystemConfiguration.framework */; };
+		16090C371A1878790052E58A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C351A1878790052E58A /* Bolts.framework */; };
+		16090C381A1878790052E58A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16090C361A1878790052E58A /* Parse.framework */; };
 		162AE47F1A17A13B00ADA525 /* AddElementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AE47E1A17A13B00ADA525 /* AddElementViewController.m */; };
-		162AE48E1A17D02A00ADA525 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AE48D1A17D02A00ADA525 /* LogInViewController.m */; };
+		162AE48E1A17D02A00ADA525 /* CreateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AE48D1A17D02A00ADA525 /* CreateUserViewController.m */; };
 		163BE8971A1871D30092D3A8 /* AddElementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AE4841A17A25D00ADA525 /* AddElementTableViewController.m */; };
+		16A5C63D1A188A86004D8E43 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A5C63C1A188A86004D8E43 /* LogInViewController.m */; };
+		16B5CD691A18AC8F001E3068 /* MiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B5CD681A18AC8F001E3068 /* MiddleViewController.m */; };
 		8DA6053519849F4800BE11BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA6053419849F4800BE11BB /* Foundation.framework */; };
 		8DA6053719849F4800BE11BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA6053619849F4800BE11BB /* CoreGraphics.framework */; };
 		8DA6053919849F4800BE11BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA6053819849F4800BE11BB /* UIKit.framework */; };
@@ -38,13 +51,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16090C231A1876EA0052E58A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		16090C251A1876F30052E58A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		16090C271A18770C0052E58A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		16090C291A1877230052E58A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		16090C2B1A18772B0052E58A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		16090C2D1A1877520052E58A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		16090C2F1A1877620052E58A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		16090C311A18776B0052E58A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		16090C331A1877720052E58A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		16090C351A1878790052E58A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.5.0/Bolts.framework"; sourceTree = "<group>"; };
+		16090C361A1878790052E58A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.5.0/Parse.framework"; sourceTree = "<group>"; };
 		162AE47C1A174A8400ADA525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		162AE47D1A17A13B00ADA525 /* AddElementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddElementViewController.h; path = ../AddElementViewController.h; sourceTree = "<group>"; };
 		162AE47E1A17A13B00ADA525 /* AddElementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddElementViewController.m; path = ../AddElementViewController.m; sourceTree = "<group>"; };
 		162AE4831A17A25D00ADA525 /* AddElementTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddElementTableViewController.h; path = ../AddElementTableViewController.h; sourceTree = "<group>"; };
 		162AE4841A17A25D00ADA525 /* AddElementTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddElementTableViewController.m; path = ../AddElementTableViewController.m; sourceTree = "<group>"; };
-		162AE48C1A17D02A00ADA525 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
-		162AE48D1A17D02A00ADA525 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		162AE48C1A17D02A00ADA525 /* CreateUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserViewController.h; sourceTree = "<group>"; };
+		162AE48D1A17D02A00ADA525 /* CreateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserViewController.m; sourceTree = "<group>"; };
+		16A5C63B1A188A86004D8E43 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		16A5C63C1A188A86004D8E43 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		16B5CD671A18AC8F001E3068 /* MiddleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiddleViewController.h; sourceTree = "<group>"; };
+		16B5CD681A18AC8F001E3068 /* MiddleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiddleViewController.m; sourceTree = "<group>"; };
 		8DA6053119849F4800BE11BB /* YO iOS SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YO iOS SDK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA6053419849F4800BE11BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8DA6053619849F4800BE11BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,7 +101,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16090C341A1877720052E58A /* SystemConfiguration.framework in Frameworks */,
+				16090C321A18776B0052E58A /* StoreKit.framework in Frameworks */,
+				16090C301A1877620052E58A /* Security.framework in Frameworks */,
+				16090C2E1A1877520052E58A /* QuartzCore.framework in Frameworks */,
+				16090C2C1A18772B0052E58A /* MobileCoreServices.framework in Frameworks */,
+				16090C2A1A1877230052E58A /* libz.dylib in Frameworks */,
+				16090C281A18770C0052E58A /* CoreLocation.framework in Frameworks */,
+				16090C371A1878790052E58A /* Bolts.framework in Frameworks */,
 				8DA6053719849F4800BE11BB /* CoreGraphics.framework in Frameworks */,
+				16090C261A1876F30052E58A /* CFNetwork.framework in Frameworks */,
+				16090C381A1878790052E58A /* Parse.framework in Frameworks */,
+				16090C241A1876EA0052E58A /* AudioToolbox.framework in Frameworks */,
 				8DA6053919849F4800BE11BB /* UIKit.framework in Frameworks */,
 				8DA6053519849F4800BE11BB /* Foundation.framework in Frameworks */,
 			);
@@ -114,6 +153,17 @@
 		8DA6053319849F4800BE11BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16090C351A1878790052E58A /* Bolts.framework */,
+				16090C361A1878790052E58A /* Parse.framework */,
+				16090C331A1877720052E58A /* SystemConfiguration.framework */,
+				16090C311A18776B0052E58A /* StoreKit.framework */,
+				16090C2F1A1877620052E58A /* Security.framework */,
+				16090C2D1A1877520052E58A /* QuartzCore.framework */,
+				16090C2B1A18772B0052E58A /* MobileCoreServices.framework */,
+				16090C291A1877230052E58A /* libz.dylib */,
+				16090C271A18770C0052E58A /* CoreLocation.framework */,
+				16090C251A1876F30052E58A /* CFNetwork.framework */,
+				16090C231A1876EA0052E58A /* AudioToolbox.framework */,
 				8DA6053419849F4800BE11BB /* Foundation.framework */,
 				8DA6053619849F4800BE11BB /* CoreGraphics.framework */,
 				8DA6053819849F4800BE11BB /* UIKit.framework */,
@@ -129,8 +179,12 @@
 				8DA6054319849F4800BE11BB /* AppDelegate.h */,
 				8DA6054419849F4800BE11BB /* AppDelegate.m */,
 				8DA6054619849F4800BE11BB /* Main.storyboard */,
-				162AE48C1A17D02A00ADA525 /* LogInViewController.h */,
-				162AE48D1A17D02A00ADA525 /* LogInViewController.m */,
+				16B5CD671A18AC8F001E3068 /* MiddleViewController.h */,
+				16B5CD681A18AC8F001E3068 /* MiddleViewController.m */,
+				162AE48C1A17D02A00ADA525 /* CreateUserViewController.h */,
+				162AE48D1A17D02A00ADA525 /* CreateUserViewController.m */,
+				16A5C63B1A188A86004D8E43 /* LogInViewController.h */,
+				16A5C63C1A188A86004D8E43 /* LogInViewController.m */,
 				162AE4831A17A25D00ADA525 /* AddElementTableViewController.h */,
 				162AE4841A17A25D00ADA525 /* AddElementTableViewController.m */,
 				162AE47D1A17A13B00ADA525 /* AddElementViewController.h */,
@@ -281,7 +335,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				162AE48E1A17D02A00ADA525 /* LogInViewController.m in Sources */,
+				16A5C63D1A188A86004D8E43 /* LogInViewController.m in Sources */,
+				162AE48E1A17D02A00ADA525 /* CreateUserViewController.m in Sources */,
+				16B5CD691A18AC8F001E3068 /* MiddleViewController.m in Sources */,
 				163BE8971A1871D30092D3A8 /* AddElementTableViewController.m in Sources */,
 				8DA6054B19849F4800BE11BB /* ViewController.m in Sources */,
 				162AE47F1A17A13B00ADA525 /* AddElementViewController.m in Sources */,
@@ -414,6 +470,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.5.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YO iOS SDK/YO iOS SDK-Prefix.pch";
 				INFOPLIST_FILE = "YO iOS SDK/YO iOS SDK-Info.plist";
@@ -428,6 +488,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/parse-library-1.5.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YO iOS SDK/YO iOS SDK-Prefix.pch";
 				INFOPLIST_FILE = "YO iOS SDK/YO iOS SDK-Info.plist";

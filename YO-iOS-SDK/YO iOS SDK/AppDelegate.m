@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 yiqin. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "YO.h"
 
@@ -18,7 +19,9 @@
     // Put your APIKey
     NSString *APIKey = @"6d6af867-5d11-4dd0-b41d-235474e13a86";
     [YO startWithAPIKey:APIKey];
-    
+    [Parse setApplicationId:@"TBlb7X2Hbe9B4YwFx4HBXGNaSaSk1c3lvDIcua5y"
+                  clientKey:@"6xNqlNzNDsdrgZDIaZrTFXjHh4SSwS3iAkEKLFjq"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 							

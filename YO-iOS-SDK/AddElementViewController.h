@@ -10,6 +10,7 @@
 
 @interface AddElementViewController : UIViewController <UITextFieldDelegate>
 
-@property NSString *roommate;
+@property NSString *element;
+@property BOOL roommates;
 
 @end
