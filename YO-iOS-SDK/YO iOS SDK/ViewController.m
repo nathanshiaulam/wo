@@ -37,7 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [_woButton setTitle:@"Wo." forState: UIControlStateNormal];
+    [_woButton setTitle:@"Wo" forState: UIControlStateNormal];
     [_topLabel setText:@"Let your roommate(s) know."];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(userLogOut)];
     if (!self.userLoggedIn) {
