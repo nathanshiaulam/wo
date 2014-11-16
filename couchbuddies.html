@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" href="index.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-</head>
+    </head>
 
 <body>
 <main>
@@ -23,13 +23,18 @@
 </main>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//www.parsecdn.com/js/parse-1.3.1.min.js"></script>
+<script> 
+    Parse.initialize("TBlb7X2Hbe9B4YwFx4HBXGNaSaSk1c3lvDIcua5y", "blt41y29W4NYiordWn8p0pTkxKEJ62i6uNUK9tbb");
+</script>
 <script>
 $(document).ready(function() {
 
     function sendYo() {
         var http = new XMLHttpRequest();
         var url = "http://api.justyo.co/yo/";
-        var params = "api_token=4caf55e9e887f626&username=DOCHEN&link=http://104.236.56.103/there4u.html";
+        var params = "api_token=930bd38e69e4f86d8f6b237da97ee80dee5c845a&username=JDCASE&link=http://104.236.56.103/there4u.html";
+
 
         $.ajax(url, {
             method: "POST",
@@ -43,14 +48,15 @@ $(document).ready(function() {
             error: function() {
                 console.log(":(")
             }
-        });
+        }).done(function(data) {
+            $(".actionable-index").html("Your friend thanks you!");
+        });;
     }
 
 
 
     $(".actionable-index").click(function() {
         sendYo();
-        $(".actionable-index").html("Your friend thanks you!");
     });
 
 

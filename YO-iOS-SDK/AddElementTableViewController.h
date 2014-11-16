@@ -10,7 +10,8 @@
 
 @interface AddElementTableViewController : UITableViewController <UITextFieldDelegate>
 
-@property NSMutableArray *roommates;
+@property NSMutableArray *elements;
+@property BOOL roommates;
 
 - (IBAction)unwindToRoommateList:(UIStoryboardSegue *)segue;
 

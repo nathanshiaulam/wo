@@ -7,6 +7,7 @@
 //
 
 #import "AddElementViewController.h"
+#import <Parse/Parse.h>
 
 @interface AddElementViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -19,7 +20,16 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"unwindDoneToExit"]) {
-        self.roommate = self.textField.text;
+        PFUser *currentUser = [PFUser currentUser];
+        if (_roommates)
+        {
+            [currentUser[@"roommates"] addObject:self.textField.text];
+        }
+        else
+        {
+            [currentUser[@"couchBuddies"] addObject:self.textField.text];
+        }
+        [currentUser saveInBackground];
     }
 }
 

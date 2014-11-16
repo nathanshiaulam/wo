@@ -8,6 +8,7 @@
 
 #import "AddElementTableViewController.h"
 #import "AddElementViewController.h"
+#import <Parse/Parse.h>
 
 @interface AddElementTableViewController ()
 
@@ -15,19 +16,17 @@
 
 @implementation AddElementTableViewController
 
-- (void)addRoommateToList:(NSString *)item
+- (void)addElementToList:(NSString *)item
 {
     if (item != nil) {
-        [self.roommates addObject:item];
+        [self.elements addObject:item];
         [self.tableView reloadData];
     }
 }
 
 - (IBAction)unwindToRoommateList:(UIStoryboardSegue *)segue
 {
-    AddElementViewController *source = [segue sourceViewController];
-    NSString *item = source.roommate;
-    [self addRoommateToList:item];
+
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -42,7 +41,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.roommates = [[NSMutableArray alloc] init];
+    PFUser *currentUser = [PFUser currentUser];
+    if (_roommates)
+    {
+        self.elements = currentUser[@"roommates"];
+    }
+    else
+    {
+        self.elements = currentUser[@"couchBuddies"];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -50,6 +57,19 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (_roommates)
+    {
+        [(AddElementViewController *)[segue.destinationViewController topViewController] setRoommates:YES];
+    }
+    else
+    {
+        [(AddElementViewController *)[segue.destinationViewController topViewController] setRoommates:NO];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -69,19 +89,23 @@
 {
 
     // Return the number of rows in the section.
-    return [self.roommates count];
+    return [self.elements count];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"roommate"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"element"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"roommate"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"element"];
     }
     
-    NSString *roommate = [self.roommates objectAtIndex:indexPath.row];
+    NSString *roommate = [self.elements objectAtIndex:indexPath.row];
     // Configure the cell...
     cell.textLabel.text = roommate;
     
@@ -90,7 +114,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self addRoommateToList : textField.text];
+    [self addElementToList : textField.text];
     return YES;
 }
 
