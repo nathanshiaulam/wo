@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Sign-In"; ObjectID = "Cgf-7Y-5ib"; */
+"Cgf-7Y-5ib.text" = "Sign-In";
+
+/* Class = "IBUILabel"; text = "It's Sexy Time~(^_^)~"; ObjectID = "WLp-QI-3pu"; */
+"WLp-QI-3pu.text" = "It's Sexy Time~(^_^)~";
+
+/* Class = "IBUILabel"; text = "Password"; ObjectID = "YyC-Xn-65M"; */
+"YyC-Xn-65M.text" = "Password";
+
+/* Class = "IBUIButton"; normalTitle = "Sign Up"; ObjectID = "gBf-5a-45m"; */
+"gBf-5a-45m.normalTitle" = "Sign Up";
+
+/* Class = "IBUIButton"; normalTitle = "That was easy."; ObjectID = "vWe-zL-oNS"; */
+"vWe-zL-oNS.normalTitle" = "That was easy.";

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+    var data = JSON.stringify({'api_token': '4caf55e9e887f626', 'username': 'DOCHEN'});
+
+    // $.ajax({
+    // type: "POST",
+    // url: "https:/​/​api.justyo.co/​yo/​",
+    // data: data,
+    // dataType: "json",
+    // contentType: "application/x-www-form-urlencoded"
+    // }).done(function(data) {
+    //     console.log(data);
+    // });
+    
+    var http = new XMLHttpRequest();
+    var url = "http://api.justyo.co/yo/";
+    var params = "api_token=4caf55e9e887f626&username=DOCHEN";
+    http.open("POST", url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", params.length);
+    http.setRequestHeader("Connection", "close");
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            console.log(http.responseText);
+        }
+    }
+    http.send(params);
+
+
+});
+
+</script>
+
+</body>
+</html>

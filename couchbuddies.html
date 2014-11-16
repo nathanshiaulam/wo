@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<main>
+    <div class="message">
+        JDCASE has been sexiled and needs a place to stay.
+    </div>
+
+    <div class="funny-pic">
+        <img src="couch.png"/>
+    </div>
+
+    <div class="actionable-index">
+        Offer the couch?
+    </div>
+</main>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+    function sendYo() {
+        var http = new XMLHttpRequest();
+        var url = "http://api.justyo.co/yo/";
+        var params = "api_token=4caf55e9e887f626&username=JDCASE&link=http://104.236.56.103/there4u.html";
+        http.open("POST", url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader("Content-length", params.length);
+        http.setRequestHeader("Connection", "close");
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                console.log(http.responseText);
+            }
+        }
+        http.send(params);
+    }
+
+
+
+    $(".actionable-index").click(function() {
+        sendYo();
+        $(".actionable-index").html("Your friend thanks you!");
+    });
+
+
+});
+
+</script>
+</body>
+
+</html>
